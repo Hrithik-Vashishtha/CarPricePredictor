@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Input Form</title>
+    <title>Kushmanda Predictions</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Additional inline styles for the header and body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Set background color to black */
+            color: white; /* Set text color to white */
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: black; /* Set text color to black for form elements */
+        }
+
+        /* Style form inputs */
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        /* Style submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Style submit button on hover */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>User Input Form</h1>
-    <form action="/predict" method="post">
-        <label for="gender">Gender:</label>
-        <input type="number" id="gender" name="gender"><br><br>
+    <div class="header">
+        <h1>Welcome to Kushmanda Predictions</h1>
+    </div>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age"><br><br>
+    <div class="form-container">
+        <h2>Prediction Form</h2>
+        <form action="/predict" method="POST">
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" name="gender" placeholder="0 for Female, 1 for Male" required pattern="[0-1]" maxlength="1">
 
-        <label for="salary">Annual Salary:</label>
-        <input type="number" id="salary" name="salary"><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br><br>
 
-        <label for="debt">Credit Card Debt:</label>
-        <input type="number" id="debt" name="debt"><br><br>
+            <label for="salary">Annual Salary:</label>
+            <input type="number" id="salary" name="salary" required><br><br>
 
-        <label for="net_worth">Net Worth:</label>
-        <input type="number" id="net_worth" name="net_worth"><br><br>
+            <label for="debt">Credit Card Debt:</label>
+            <input type="number" id="debt" name="debt" required><br><br>
 
-        <input type="submit" value="Predict">
-    </form>
+            <label for="net_worth">Net Worth:</label>
+            <input type="number" id="net_worth" name="net_worth" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>
