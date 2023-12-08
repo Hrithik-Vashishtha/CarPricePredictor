@@ -58,10 +58,5 @@ def get_predictions(id):
         return jsonify("id not found")
     return jsonify("id not provided")
 
-@app.route('/get_photo/<str:user_name>', methods = ['GET'])
-def get_photo(id):
-    return render_template('photo.html')
-
-
 if __name__ == '__main__':
     app.run(debug=True)
