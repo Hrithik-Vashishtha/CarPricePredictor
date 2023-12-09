@@ -1,4 +1,4 @@
-Kushmanda Predictions Documentation
+# Kushmanda Predictions Documentation
 Overview
 Kushmanda Predictions is a machine learning-based application that predicts car purchase amounts based on user input. It involves a Flask web application, a trained machine learning model, and a MySQL database for data storage.
 
