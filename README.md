@@ -17,17 +17,25 @@ The project consists of several components:
 
 # Files
 
-# ai_model.py: Python script for training the machine learning model based on the 'Car_Purchasing_Data.csv' dataset.
-# app.py: Flask web application for handling user input, model prediction, and database operations.
-# data_preprocessing.py: Script for data preprocessing using MinMaxScaler.
-# Dockerfile: Configuration file for building a Docker image.
-# entrypoint.sh: Shell script for initializing the Docker container.
-# requirements.txt: File listing Python dependencies.
+# ai_model.py: 
+Python script for training the machine learning model based on the 'Car_Purchasing_Data.csv' dataset.
+# app.py: 
+Flask web application for handling user input, model prediction, and database operations.
+# data_preprocessing.py: 
+Script for data preprocessing using MinMaxScaler.
+# Dockerfile: 
+Configuration file for building a Docker image.
+# entrypoint.sh: 
+Shell script for initializing the Docker container.
+# requirements.txt: 
+File listing Python dependencies.
 
 # Directories
 
-# templates: Contains HTML templates for the web interface.
-# static: Contains CSS for styling the HTML templates.
+# templates: 
+Contains HTML templates for the web interface.
+# static: 
+Contains CSS for styling the HTML templates.
 
 # Setup Instructions
 
