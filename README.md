@@ -50,12 +50,10 @@ git clone https://github.com/your-username/Kushmanda_Assignment.git
 cd Kushmanda_Assignment
 
 2. Build the Docker image:
-
-docker build -t kushmanda_predictions .
+   docker build -t kushmanda_predictions .
 
 3. Run the Docker container:
-
-docker run -p 5000:5000 -d kushmanda_predictions
+   docker run -p 5000:5000 -d kushmanda_predictions
 
 # Usage
 1. Access the application by opening a web browser and navigating to http://localhost:5000.
