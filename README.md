@@ -47,7 +47,7 @@ cd Kushmanda_Assignment
 
 
 
-2. First run ai_model.py to create a model and then adjust it's path in app.py line 8       accordingly.
+2. First run ai_model.py to create a model and then adjust it's path in app.py line 11       accordingly.
 
 3. Build the Docker image:
    docker build -t kushmanda:v1 .
