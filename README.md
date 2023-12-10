@@ -47,18 +47,23 @@ cd Kushmanda_Assignment
 
 
 
-2. First run ai_model.py to create a model and then adjust it's path in app.py line 11       accordingly.
+2. First run ai_model.py to create a model and then adjust its path in app.py line 11       accordingly.
 
-3. Build the Docker image:
+3. Create a "predictions" database by running the command "create database predictions;"
+   
+4. Create table "predicted_data" by running the command "mycursor.execute("CREATE TABLE       predicted_data (id INT AUTO_INCREMENT PRIMARY 
+   KEY, Gender INT, Age INT, Salary FLOAT, Debt FLOAT, Net_Worth FLOAT, Purchase_Amount FLOAT)")
+
+4. Build the Docker image:
    docker build -t kushmanda:v1 .
 
-4. Run the Docker container:
+5. Run the Docker container:
    docker run -p 3306:3306 -p 5000:5000 kushmanda:v1
 
-5. Apply Kubernetes Deployment configuration:
+6. Apply Kubernetes Deployment configuration:
    kubectl apply -f deployment.yaml
 
-6. Apply Kubernetes Service configuration:
+7. Apply Kubernetes Service configuration:
    kubectl apply -f service.yaml
 
 
