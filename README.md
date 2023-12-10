@@ -47,16 +47,18 @@ cd Kushmanda_Assignment
 
 
 
-2. Build the Docker image:
+2. First run ai_model.py to create a model and then adjust it's path in app.py line 8       accordingly.
+
+3. Build the Docker image:
    docker build -t kushmanda:v1 .
 
-3. Run the Docker container:
+4. Run the Docker container:
    docker run -p 3306:3306 -p 5000:5000 kushmanda:v1
 
-4. Apply Kubernetes Deployment configuration:
+5. Apply Kubernetes Deployment configuration:
    kubectl apply -f deployment.yaml
 
-5. Apply Kubernetes Service configuration:
+6. Apply Kubernetes Service configuration:
    kubectl apply -f service.yaml
 
 
