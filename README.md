@@ -45,6 +45,8 @@ The project consists of several components:
 git clone https://github.com/Hrithik-Vashishtha/Kushmanda_Assignment.git
 cd Kushmanda_Assignment
 
+
+
 2. Build the Docker image:
    docker build -t kushmanda:v1 .
 
