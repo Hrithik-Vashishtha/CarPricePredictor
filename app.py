@@ -45,7 +45,7 @@ def predict():
     mycursor.execute(query, values)
     mydb.commit()
 
-    return jsonify(f'Predicted Purchase Amount for the user: {output}')
+    return jsonify(f'Predicted Purchase Amount for the user: {output}'), 200
 
 @app.route('/get_predictions/<int:id>', methods = ['GET'])
 def get_predictions(id):
@@ -54,9 +54,32 @@ def get_predictions(id):
         mycursor.execute(query, (id,))
         result = mycursor.fetchall()
         if result:
-            return jsonify({'Purchase Amount':result[0][6]})
-        return jsonify("id not found")
-    return jsonify("id not provided")
+            return jsonify({'Purchase Amount':result[0][6]}), 200
+        return jsonify("id not found"), 400
+    return jsonify("id not provided"), 400
+
+    
+@app.route('/get_all_predictions', methods=['GET'])
+def get_all_predictions():
+    query = 'SELECT * FROM predicted_data'
+    mycursor.execute(query)
+    result = mycursor.fetchall()
+
+    if result:
+        predictions = []
+        for row in result:
+            prediction = {
+                'ID': row[0],
+                'Gender': row[1],
+                'Age': row[2],
+                'Salary': row[3],
+                'Debt': row[4],
+                'Net Worth': row[5],
+                'Purchase Amount': row[6]
+            }
+            predictions.append(prediction)
+        return jsonify(predictions)
+    return jsonify("No predictions found")
 
 if __name__ == '__main__':
     app.run(debug=True)
