@@ -12,7 +12,7 @@ model = load_model('C:/Users/Hrithik/Desktop/Kushmanda_Assignment/trained_model.
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="09041997",
+    passwd="hrithik",
     database="predictions"
 )   
 
