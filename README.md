@@ -58,7 +58,7 @@ cd Kushmanda_Assignment
 # Usage
 1. Access the application by opening a web browser and navigating to http://localhost:5000.
 2. Fill in the form fields (Gender, Age, Annual Salary, Credit Card Debt, Net Worth) and click 'Predict' to get the predicted purchase amount.
-3. Use the 'Get Prediction' button to retrieve stored predictions based on their ID.
+3. Use the '/get_predictions/<int:id>' API to retrieve stored predictions based on their   ID.
 
 # Additional Notes
 The application uses MinMaxScaler for data normalization during prediction.

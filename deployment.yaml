@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kushmandu-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kushmandu
+  template:
+    metadata:
+      labels:
+        app: kushmandu
+    spec:
+      containers:
+      - name: kushmandu-app
+        image: your-aws-registry-url/kushmandu_image:latest  # Replace with your AWS Registry URL and image name
+        ports:
+        - containerPort: 5000
+      - name: kushmandu-mysql
+        image: mysql:latest  # Use the MySQL image from Docker Hub
+        env:
+        - name: MYSQL_DATABASE
+          value: mydatabase
+        - name: MYSQL_USER
+          value: hrithik
+        - name: MYSQL_PASSWORD
+          value: hrithik@12345
+        ports:
+        - containerPort: 3306

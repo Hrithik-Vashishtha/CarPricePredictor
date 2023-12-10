@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kushmandu-service
+spec:
+  selector:
+    app: kushmandu
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+  type: LoadBalancer
