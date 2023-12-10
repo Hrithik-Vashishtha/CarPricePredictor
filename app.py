@@ -7,6 +7,7 @@ import mysql.connector
 
 app = Flask(__name__)
 
+#change the path of model accordingly to run it on local or on cloud
 model = load_model('C:/Users/Hrithik/Desktop/Kushmanda_Assignment/trained_model.keras')
 
 mydb = mysql.connector.connect(
