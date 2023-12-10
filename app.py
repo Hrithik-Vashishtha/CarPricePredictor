@@ -19,7 +19,8 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-# mycursor.execute("CREATE TABLE predicted_data (id INT AUTO_INCREMENT PRIMARY KEY, Gender INT, Age INT, Salary FLOAT, Debt FLOAT, Net_Worth FLOAT, Purchase_Amount FLOAT)")
+# create dabatbase = CREATE DATABASE predictions;
+# Create Table = CREATE TABLE predicted_data (id INT AUTO_INCREMENT PRIMARY KEY, Gender INT, Age INT, Salary FLOAT, Debt FLOAT, Net_Worth FLOAT, Purchase_Amount FLOAT);
 @app.route('/')
 def index():
     return render_template('index.html')
