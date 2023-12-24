@@ -5,6 +5,8 @@ from data_preprocessing import DataPreprocessing
 from tensorflow.keras.models import load_model
 import mysql.connector
 
+print("Hello")
+
 app = Flask(__name__)
 
 #change the path of model accordingly to run it on local or on cloud
